@@ -72,7 +72,7 @@ console.log(me === enemy); // false
 let month = prompt("Insert month's name or number:");
 switch(typeof month){
 	case "number":
-		switch(month){
+		switch(+month){
 			case 1:
 				alert("January");
 				break;
