@@ -70,94 +70,19 @@ console.log(me === enemy); // false
 
 //Task3
 let month = prompt("Insert month's name or number:");
-switch(typeof month){
-	case "number":
-		switch(+month){
-			case 1:
-				alert("January");
-				break;
-			case 2:
-				alert("February");
-				break;
-			case 3:
-				alert("March");
-				break;
-			case 4:
-				alert("April");
-				break;
-			case 5:
-				alert("May");
-				break;
-			case 6:
-				alert("June");
-				break;
-			case 7:
-				alert("July");
-				break;
-			case 8:
-				alert("August");
-				break;
-			case 9:
-				alert("September");
-				break;
-			case 10:
-				alert("October");
-				break;
-			case 11:
-				alert("November");
-				break;
-			case 12:
-				alert("December");
-				break;
-			default:
-			alert("Oops.. Something went wrong!");
-			break;
+const months= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+if(isNaN(month)){
+	for(let i = 0; i < months.length; i ++)
+	{
+		if(month === months[i])
+		{
+			alert(i + 1);
 		}
-		break;
-	case "string":
-		switch(month){
-			case "January":
-				alert(1);
-				break;
-			case "February":
-				alert(2);
-				break;
-			case "March":
-				alert(3);
-				break;
-			case "April":
-				alert(4);
-				break;
-			case "May":
-				alert(5);
-				break;
-			case "June":
-				alert(6);
-				break;
-			case "July":
-				alert(7);
-				break;
-			case "August":
-				alert(8);
-				break;
-			case "September":
-				alert(9);
-				break;
-			case "October":
-				alert(10);
-				break;
-			case "November":
-				alert(11);
-				break;
-			case "December":
-				alert(12);
-				break;
-			default:
-			alert("Oops.. Something went wrong!");
-			break;
-		}
-		break;
-	default:
-		alert("Oops.. Something went wrong!");
-		break;
+	}	
+}
+else if(+month > 0 && +month < 13){
+	alert(months[month - 1]);
+}
+else{
+	alert("Oops.. Something went wrong");
 }
